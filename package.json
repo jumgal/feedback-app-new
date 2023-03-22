@@ -8,7 +8,8 @@
     "start": "node feedback-app-backend/server.js",
     "server": "nodemon feedback-app-backend/server.js",
     "client": "npm start --prefix feedback-app-frontend",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix feedback-app-frontend && npm run build --prefix feedback-app-frontend"
   },
   "author": "Jumgal Arymbaev",
   "license": "ISC",
