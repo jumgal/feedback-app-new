@@ -1,0 +1,124 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+body {
+  font-family: "Jost", sans-serif;
+}
+$body-bg: #f2f4ff;
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark,
+);
+
+$custom-colors: (
+  "color-purple": #ad1fea,
+  "color-blue": #4661e6,
+  "color-dark": #373f68,
+  "color-light-first": #f2f4ff,
+  "color-light-second": #f7f8fd,
+  "color-dark-second": #3a4374,
+  "color-gray": #647196,
+  "color-orange": #f49f85,
+  "color-blue-light": #62bcfa,
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+.logo-background {
+  background-image: linear-gradient(to right, #62bcfa, #4661e6, #ad1fea);
+  height: 150px;
+}
+
+.feedback-row {
+  width: 500px;
+}
+
+.feedback-column {
+  min-height: 80vh;
+}
+
+.input-feedback__headline {
+  height: 50px;
+}
+
+.input-feedback__detail {
+  height: 75px;
+}
+
+.home-details {
+  height: 80vh;
+}
+
+.login-page__content {
+  height: 80vh;
+}
+
+.register-page__content {
+  height: 80vh;
+}
+
+.form-select {
+  background-image: url('../assets/shared/icon-arrow-down.svg') !important;
+}
+
+.custom-spinner {
+  height: 50vh;
+}
+
+#single-feedback {
+  height: 100vh;
+}
+
+.btn.go-back-button:hover {
+  background-color: #4661e6;
+  color: #fff !important;
+}
+
+.btn.category-button:hover {
+  background-color: #4661e6;
+  color: #fff !important;
+}
+
+$border-widths: (
+  1: 1px,
+  2: 2px,
+  3: 3px,
+  4: 7px,
+  5: 10px
+);
+
+@media screen and (max-width: 500px) {
+  .container.app-container {
+    width: 100% !important;
+  }
+  .home-details {
+    h1 {
+      font-size: 25px;
+    }
+    p {
+      font-size: 16px;
+    }
+    button {
+      font-size: 16px;
+    }
+  }
+  #feedback-main-page {
+    width: 100% !important;
+  }
+}
+
+#feedback-categories button:hover {
+  cursor: pointer;
+  background-color: #4661e6;
+  color: #fff !important;
+}
+
+@import "bootstrap";
